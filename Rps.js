@@ -4,7 +4,6 @@
 //  return (Math.random() * 100)
 //}
 let randomNum = 70;// Math.floor(Math.random() * 100);
-let game =""
 console.log("This is the randomNum: " + randomNum)
 
 function cpuChoice() {
@@ -29,19 +28,21 @@ let cpuWin = 0
 let playerWin = 0
 
 function roundWin(roundResult) {
+  // let cpuWin = 0
+  // let playerWin = 0
+
   if (roundResult === "SS" || "PP" || "RR") {
     return "Round is a draw";
   }
   else if (roundResult === "SP" || "PR" || "RS") {
-     cpuWin += 1  
      return "CPU wins";
   } 
-  else 
-    playerWin += 1
+  else if (roundResult === "RP" || "PS" || "SR") {
     return "Player wins";
+  }
 }
 
 let outcome = roundWin()
-console.log("This is the outcome" + outcome)
+console.log("This is the outcome: " + outcome)
 console.log(cpuWin)
 console.log(playerWin)
