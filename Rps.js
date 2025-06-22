@@ -44,9 +44,6 @@ function roundWin(roundResult) {
 }
 
 let outcome = roundWin(roundResult);
-function gameRepeat () {
-  if 
-}
 console.log("This is the outcome: " + outcome)
 console.log(cpuWin)
 console.log(playerWin)

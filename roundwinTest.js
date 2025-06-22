@@ -12,4 +12,4 @@ console.log(roundResult)
   }
 }
 
-console.log(roundWin)
+console.log(roundOutcome)
