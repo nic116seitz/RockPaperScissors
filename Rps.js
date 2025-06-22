@@ -1,3 +1,4 @@
+for (let rounds = 0; rounds < 6; rounds++) {
 // This is a random Number Generator for the CPU choice 
 let randomNum = Math.floor(Math.random() * 100);
 console.log("This is the randomNum: " + randomNum)
@@ -36,16 +37,16 @@ function roundWin(roundResult) {
     return "Round is a draw";
   }
   else if (roundResult == "SP" || roundResult == "PR" || roundResult == "RS") {
-    cpuWin++; 
     return "CPU wins";
   } 
   else if (roundResult == "RP" || roundResult == "PS" || roundResult == "SR") {
-    playerWin++;
     return "Player wins";
   }
 }
 // This converts the Round result into a pritable outcome
 let outcome = roundWin(roundResult);
+
 console.log("This is the outcome: " + outcome)
 console.log(cpuWin)
 console.log(playerWin)
+}
