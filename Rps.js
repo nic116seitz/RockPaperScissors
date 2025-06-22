@@ -1,11 +1,8 @@
-// let rounds = 0; 
-// playerChoice = alert(prompt("Enter a letter of your choice (R = rock S = Scissors P = Paper)"));
-// function randomNum(){
-//  return (Math.random() * 100)
-//}
+// This is a random Number Generator for the CPU choice 
 let randomNum = Math.floor(Math.random() * 100);
 console.log("This is the randomNum: " + randomNum)
 
+//This function takes the random Number and makes it equivalent to Rock Paper or Scissors
 function cpuChoice() {
 if (randomNum <= 100/3) {
     return "R";
@@ -17,18 +14,23 @@ else {
     return "S";
   }
 }
+
 console.log("This is CPU choice: " + cpuChoice())
+
+// This prompts the player to enter a choice 
 let playerChoice = prompt("Enter the corresponding letter of your choice R = Rock P = Paper S = Scissors");
 console.log("This is the player Choice: " + playerChoice)
 
+// This combines the choices of the computer and the Player to generate a string = to the round Result
 let roundResult = cpuChoice() + playerChoice;
 console.log("This is the round result: " + roundResult)
 
 let cpuWin = 0;
 let playerWin = 0;
+let roundCounter = 0;
 
+// This takes the round result and converts to a string informing who won the game additionally it adds wins to win counters above
 function roundWin(roundResult) {
-  //let roundCounter = 0
 
   if (roundResult == "SS" || roundResult == "PP" || roundResult == "RR") {
     return "Round is a draw";
@@ -42,7 +44,7 @@ function roundWin(roundResult) {
     return "Player wins";
   }
 }
-
+// This converts the Round result into a pritable outcome
 let outcome = roundWin(roundResult);
 console.log("This is the outcome: " + outcome)
 console.log(cpuWin)
