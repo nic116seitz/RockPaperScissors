@@ -28,16 +28,18 @@ let cpuWin = 0
 let playerWin = 0
 
 function roundWin(roundResult) {
-  // let cpuWin = 0
-  // let playerWin = 0
+   let cpuWin = 0
+   let playerWin = 0
 
-  if (roundResult === "SS" || "PP" || "RR") {
+  if (roundResult == "SS" || roundResult == "PP" || roundResult == "RR") {
     return "Round is a draw";
   }
-  else if (roundResult === "SP" || "PR" || "RS") {
+  else if (roundResult == "SP" || roundResult == "PR" || roundResult == "RS") {
+     cpuWin += 1
      return "CPU wins";
   } 
-  else if (roundResult === "RP" || "PS" || "SR") {
+  else if (roundResult == "RP" || roundResult == "PS" || roundResult == "SR") {
+    playerWin += 1
     return "Player wins";
   }
 }

@@ -1,16 +1,15 @@
-let roundResult = ""
+let roundOutcome = roundWin("RP")
 function roundWin(roundResult) {
 console.log(roundResult)
-  if (roundResult === "SS" || "PP" || "RR") {
+  if (roundResult == "SS" || roundResult == "PP" || roundResult == "RR") {
     return "Round is a draw";
   }
-  else if (roundResult === "SP" || "PR" || "RS") {
+  else if (roundResult == "SP" || roundResult == "PR" || roundResult == "RS") {
      return "CPU wins";
   } 
-  else if (roundResult === "RP" || "PS" || "SR") {
+  else if (roundResult == "RP" || roundResult == "PS" || roundResult == "SR") {
     return "Player wins";
   }
 }
 
-let roundOutcome = roundWin("SP")
 console.log(roundOutcome)
